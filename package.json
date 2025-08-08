@@ -1,0 +1,77 @@
+{
+  "name": "new-tab-page",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Halaman tab baru yang penuh animasi dengan search engine, widget interaktif, dan pengaturan lengkap",
+  "keywords": [
+    "new-tab",
+    "browser-extension",
+    "react",
+    "tailwindcss",
+    "framer-motion",
+    "widgets",
+    "search-engine",
+    "productivity"
+  ],
+  "author": {
+    "name": "Your Name",
+    "email": "your-email@example.com"
+  },
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "format": "prettier --write src/**/*.{js,jsx,css,md}",
+    "analyze": "npm run build && npx vite-bundle-analyzer dist"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "framer-motion": "^10.16.4",
+    "lucide-react": "^0.263.1",
+    "react-icons": "^4.11.0",
+    "@headlessui/react": "^1.7.15"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.0.3",
+    "autoprefixer": "^10.4.15",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "postcss": "^8.4.29",
+    "prettier": "^3.0.0",
+    "tailwindcss": "^3.3.3",
+    "vite": "^4.4.5",
+    "vite-bundle-analyzer": "^0.7.0"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/new-tab-page.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/new-tab-page/issues"
+  },
+  "homepage": "https://yourusername.github.io/new-tab-page",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
