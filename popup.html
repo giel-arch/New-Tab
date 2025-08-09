@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Tab Page Settings</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 16px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      margin: 0;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    
+    .header h1 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    
+    .button {
+      width: 100%;
+      padding: 12px;
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 8px;
+      color: white;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-bottom: 8px;
+    }
+    
+    .button:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: translateY(-1px);
+    }
+    
+    .footer {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 12px;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>🌟 New Tab Page</h1>
+  </div>
+  
+  <button class="button" id="openSettings">
+    ⚙️ Buka Pengaturan
+  </button>
+  
+  <button class="button" id="openNewTab">
+    🆕 Buka Tab Baru
+  </button>
+  
+  <button class="button" id="resetSettings">
+    🔄 Reset Pengaturan
+  </button>
+  
+  <div class="footer">
+    Dibuat dengan ❤️ untuk produktivitas
+  </div>
+  
+  <script>
+    document.getElementById('openSettings').addEventListener('click', () => {
+      chrome.tabs.create({ url: 'chrome://newtab' });
+    });
+    
+    document.getElementById('openNewTab').addEventListener('click', () => {
+      chrome.tabs.create({ url: 'chrome://newtab' });
+    });
+    
+    document.getElementById('resetSettings').addEventListener('click', () => {
+      if (confirm('Yakin ingin mereset semua pengaturan?')) {
+        chrome.storage.local.clear(() => {
+          alert('Pengaturan telah direset!');
+        });
+      }
+    });
+  </script>
+</body>
+</html> 
